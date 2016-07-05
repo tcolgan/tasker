@@ -53,8 +53,8 @@
         CaptureOutputWith="ProcessBuffer"
         Deletable="0"
         SaveOption="SaveNone"
-        RunFromDir="%bw">
-        <Exec CmdLine='vsdebugio -prog "%on"'/>
+        RunFromDir="%bd">
+        <Exec CmdLine='vsdebugio -prog "%rw/%on"'/>
       </Target>
       <Target
         Name="Execute"
@@ -64,8 +64,8 @@
         CaptureOutputWith="ProcessBuffer"
         Deletable="0"
         SaveOption="SaveWorkspaceFiles"
-        RunFromDir="%bw">
-        <Exec CmdLine='"%on"'/>
+        RunFromDir="%bd">
+        <Exec CmdLine='"%rw/%on"'/>
       </Target>
       <Target
         Name="dash"
@@ -94,14 +94,10 @@
     <F N="../src/timer.cpp"/>
     <F N="../src/timer.h"/>
     <F N="../src/util.h"/>
-    <F N="../src/windows/os.c"/>
-    <F N="../src/windows/os.h"/>
-    <F N="../src/linux/os.c"/>
-    <F N="../src/linux/os.h"/>
     <F
       N="../makefile"
       Type="Makefile"/>
-    <F N="../README.md"/>
+    <F N="../readme.txt"/>
     <F N="../slickedit/project.vpj"/>
   </Files>
 </Project>

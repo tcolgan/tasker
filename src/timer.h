@@ -11,6 +11,7 @@ public:
    Timer();
    uint64_t getDeltaUSec() ;
    uint64_t getDeltaUSecAndClear() ;
+   uint64_t clear() ;
 private:
    uint64_t _base ;
 };

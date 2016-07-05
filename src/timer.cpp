@@ -4,12 +4,17 @@
 
 Timer::Timer()
 {
-   _base = getTimeUSec() ;
+   clear() ;
 }
 
 uint64_t Timer::getDeltaUSec() 
 {
    return getTimeUSec() - _base ;
+}
+
+uint64_t Timer::clear() 
+{
+   _base = getTimeUSec() ;
 }
 
 uint64_t Timer::getDeltaUSecAndClear() 
