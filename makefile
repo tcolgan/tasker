@@ -1,10 +1,12 @@
 ifeq ($(OS),Windows_NT)
   # Windows stuff
-  OUTFILE=tasker.exe
+  OUTFILEWIN=tasker.exe
+  OUTFILE=$(OUTFILEWIN)
   OSDIR=src/windows
 else
   # Linux stuff
-  OUTFILE=tasker
+  OUTFILELIN=tasker
+  OUTFILE=$(OUTFILELIN)
   OSDIR=src/linux
 endif
 
@@ -72,7 +74,8 @@ $(DEPDIR):
 	$(MKDIR) -p "$(DEPDIR)"
 
 clean:
-	$(RM) -f $(OUTFILE)
+	$(RM) -f $(OUTFILELIN)
+	$(RM) -f $(OUTFILEWIN)
 	$(RM) -f $(OBJDIR)/*.*
 	$(RM) -f $(DEPDIR)/*.*
 	$(RMDIR) $(DEPDIR)
