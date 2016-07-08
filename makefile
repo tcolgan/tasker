@@ -1,11 +1,12 @@
+OUTFILEWIN=tasker.exe
+OUTFILELIN=tasker
+
 ifeq ($(OS),Windows_NT)
   # Windows stuff
-  OUTFILEWIN=tasker.exe
   OUTFILE=$(OUTFILEWIN)
   OSDIR=src/windows
 else
   # Linux stuff
-  OUTFILELIN=tasker
   OUTFILE=$(OUTFILELIN)
   OSDIR=src/linux
 endif
